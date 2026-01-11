@@ -21,3 +21,4 @@ set.background = "dark"
 set.signcolumn = "yes"
 set.cursorline = true
 set.colorcolumn = "80"
+set.wrap = false
