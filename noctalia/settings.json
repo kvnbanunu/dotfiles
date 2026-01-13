@@ -135,8 +135,7 @@
                     "showUnreadBadge": true
                 },
                 {
-                    "deviceNativePath": "",
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "hideIfNotDetected": true,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
