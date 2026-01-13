@@ -2,12 +2,16 @@ return {
 	{ -- LSP install
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
-			essure_installed = {
+			ensure_installed = {
 				"ts_ls",
 				"html",
 				"cssls",
 				"lua_ls",
 				"eslint",
+				"gopls",
+				"clangd",
+				"jdtls",
+				"basedpyright",
 			},
 		},
 		dependencies = {
@@ -35,6 +39,8 @@ return {
 				"isort", -- python imports
 				"black", -- python formatter
 				"eslint_d",
+				"clang-format",
+				"gofumpt",
 			},
 		},
 		dependencies = {
