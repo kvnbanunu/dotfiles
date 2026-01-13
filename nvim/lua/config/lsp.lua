@@ -1,45 +1,45 @@
 local keymap = vim.keymap
 vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-    callback = function(ev)
-        local opts = { buffer = ev.buf, silent = true }
-        -- set keybinds
-        opts.desc = "Show LSP references"
-        keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+	callback = function(ev)
+		local opts = { buffer = ev.buf, silent = true }
+		-- set keybinds
+		opts.desc = "Show LSP references"
+		keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-        opts.desc = "Go to declaration"
-        keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+		opts.desc = "Go to declaration"
+		keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
-        opts.desc = "Show LSP definition"
-        keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- show lsp definition
+		opts.desc = "Show LSP definition"
+		keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- show lsp definition
 
-        opts.desc = "Show LSP implementations"
-        keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+		opts.desc = "Show LSP implementations"
+		keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
-        opts.desc = "Show LSP type definitions"
-        keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+		opts.desc = "Show LSP type definitions"
+		keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
-        opts.desc = "See available code actions"
-        keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+		opts.desc = "See available code actions"
+		keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
-        opts.desc = "Show documentation for what is under cursor"
-        keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+		opts.desc = "Show documentation for what is under cursor"
+		keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
-        opts.desc = "Restart LSP"
-        keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-    end,
+		opts.desc = "Restart LSP"
+		keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+	end,
 })
 
 local severity = vim.diagnostic.severity
 
 vim.diagnostic.config({
-    virtual_lines = true,
-    signs = {
-        text = {
-            [severity.ERROR] = " ",
-            [severity.WARN] = " ",
-            [severity.HINT] = "󰠠 ",
-            [severity.INFO] = " ",
-        },
-    },
+	virtual_lines = true,
+	signs = {
+		text = {
+			[severity.ERROR] = " ",
+			[severity.WARN] = " ",
+			[severity.HINT] = "󰠠 ",
+			[severity.INFO] = " ",
+		},
+	},
 })
