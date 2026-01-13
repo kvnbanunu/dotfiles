@@ -118,7 +118,7 @@ output "eDP-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 5
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -166,7 +166,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1.5
+        width 4
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -174,7 +174,8 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        // active-color "#7fc8ff"
+        active-gradient from="#fc94af" to="#7fc8ff" angle=45 relative-to="workspace-view"
 
         // Color of the ring on inactive monitors.
         //
@@ -262,10 +263,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
+        // left -5
+        // right -5
+        // top -5
+        // bottom -5
     }
 }
 
@@ -374,7 +375,7 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+B hotkey-overlay-title="Browser: Firefox" { spawn "firefox"; }
-    Mod+E hotkey-overlay-title="Explorer: Nautilus" { spawn "nautilus"; }
+    Mod+E hotkey-overlay-title="Explorer: Nautilus" { spawn-sh "nautilus -w"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
