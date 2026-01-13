@@ -22,6 +22,7 @@ set.signcolumn = "yes"
 set.cursorline = true
 set.colorcolumn = "80"
 set.wrap = false
+set.winborder = "rounded"
 
 -- show mode in cmdline
 set.showmode = false
