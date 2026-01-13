@@ -22,3 +22,7 @@ set.signcolumn = "yes"
 set.cursorline = true
 set.colorcolumn = "80"
 set.wrap = false
+
+-- show mode in cmdline
+set.showmode = false
+
