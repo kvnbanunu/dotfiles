@@ -41,6 +41,7 @@ return {
 				"eslint_d",
 				"clang-format",
 				"gofumpt",
+				"taplo",
 			},
 		},
 		dependencies = {
