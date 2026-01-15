@@ -614,9 +614,12 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
+    Mod+S { screenshot; }
     Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Shift+Print { screenshot-screen; }
+    Mod+Shift+S { screenshot-screen; }
+    Ctrl+Print { screenshot-window; }
+    Mod+Ctrl+S { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
