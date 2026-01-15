@@ -8,6 +8,9 @@ dynamic_padding = true
 normal = { family = "JetBrainsMono Nerd Font Propo", style = "Regular" }
 size = 13
 
+[mouse]
+hide_when_typing = true
+
 [colors.primary]
 # background = "#1a1b26"
 background = "#222436"
