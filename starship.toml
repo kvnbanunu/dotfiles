@@ -1,14 +1,12 @@
 add_newline = false
 
-format = '󰣇 $all'
+format = '󰣇 $username$all'
 
 [character]
-# success_symbol = "[❯](bold green)"
-# error_symbol = "[❯](bold red)"
 success_symbol = "[](bold blue)"
 error_symbol = "[󰱶](bold red)"
 
 [username]
 disabled = false
 show_always = true
-format = '[\[](bold)[$user](bold)[\]](bold) '
+format = '[\[$user\]](bold) '
