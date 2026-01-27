@@ -7,7 +7,7 @@ return {
 				"html",
 				"cssls",
 				"lua_ls",
-				"eslint",
+				-- "eslint",
 				"gopls",
 				"clangd",
 				"jdtls",
@@ -38,7 +38,7 @@ return {
 				"stylua",
 				"isort", -- python imports
 				"black", -- python formatter
-				"eslint_d",
+				-- "eslint_d",
 				"clang-format",
 				"gofumpt",
 				"taplo",
