@@ -6,6 +6,9 @@ vim.api.nvim_create_autocmd("FileType", {
 		"typescript",
 		"typescriptreact",
 		"yaml",
+		"css",
+		"html",
+		"java",
 	},
 	callback = function()
 		vim.opt_local.tabstop = 2

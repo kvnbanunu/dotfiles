@@ -13,6 +13,7 @@ return {
 				highlight = true,
 				ignore = {
 					"cmp_docs",
+					"cmp_menu",
 					"lazy",
 					"mason",
 					"TelescopePrompt",
@@ -21,6 +22,8 @@ return {
 					"help",
 					"checkhealth",
 					"netrw",
+					"javascriptreact",
+					"typescriptreact",
 				},
 			})
 		end,
