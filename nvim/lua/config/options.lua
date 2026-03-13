@@ -3,7 +3,7 @@ local set = vim.opt
 -- line numbers
 set.number = true
 set.relativenumber = true
-set.scrolloff = 8
+-- set.scrolloff = 8
 
 -- indents and tabs
 set.tabstop = 4
