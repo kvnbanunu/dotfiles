@@ -4,6 +4,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"ts_ls",
+				"tailwindcss",
 				"html",
 				"cssls",
 				"lua_ls",
@@ -12,6 +13,7 @@ return {
 				"clangd",
 				"jdtls",
 				"basedpyright",
+				"marksman",
 			},
 		},
 		dependencies = {
