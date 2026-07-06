@@ -21,6 +21,17 @@ return {
 				java = { "google-java-format" },
 				go = { "gofumpt" },
 				toml = { "taplo" },
+				elixir = { "mix" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+			},
+			formatters = {
+				["clang-format"] = {
+					prepend_args = {
+						"--style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never}",
+						-- "--fallback-style=LLVM",
+					},
+				},
 			},
 			format_on_save = {
 				lsp_fallback = true,

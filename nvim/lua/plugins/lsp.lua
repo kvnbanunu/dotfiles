@@ -14,6 +14,7 @@ return {
 				"jdtls",
 				"basedpyright",
 				"marksman",
+				"expert",
 			},
 		},
 		dependencies = {
