@@ -28,8 +28,9 @@ return {
 			formatters = {
 				["clang-format"] = {
 					prepend_args = {
-						"--style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never}",
-						-- "--fallback-style=LLVM",
+						-- "--style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never}",
+						"--style=file",
+						"--fallback-style=LLVM",
 					},
 				},
 			},
